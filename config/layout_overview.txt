@@ -1,0 +1,54 @@
+// UNIQLY'S CUSTOM KEYMAP
+// <n> -> Hold Layer
+// =>n -> Goto Layer
+// ":x" -> Hold Tap
+// ":m>x" -> Mod Morph
+// _blank_ -> Transparent
+// _camelCase_ -> Macro
+// _equal_ -> Layer Held Down
+// (a_b.c)<n> -> Combo
+
+// NUM REF
+// |  0  |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  10 |  11 |
+// |  12 |  13 |  14 |  15 |  16 |  17 |     |  18 |  19 |  20 |  21 |  22 |  23 |
+// |  24 |  25 |  26 |  27 |  28 |  29 |     |  30 |  31 |  32 |  33 |  34 |  35 |
+//                   |  36 |  37 |  38 |     |  39 |  40 |  41 |
+
+// COMBOS LIST
+// combo_esc (0_1.ESC)<0,1>   : PRESS ESC ON TAB+;/Q
+// combo_del (10_11.DEL)<0,1> : PRESS DEL ON L/P+BKSP
+// qwrt_tog (24_35_39,=>1)<0> : TOGGLES LAYOUT ON LSHFT+RSHFT+ENT
+// dvrk_tog (24_35_39.=>0)<1> : TOGGLES LAYOUT ON LSHFT+RSHFT+ENT
+// adj_mo (<2>_<3>.<4>)<all> : ENABLE ADJ ON LWR+RSE
+
+// 0 DVORAK
+// |TAB  | ; : | , < | . > |  P  |  Y  |     |  F  |  G  |  C  |  R  |  L  |BKSP |
+// |CTRL |  A  |  O  |  E  |  U  |  I  |     |  D  |  H  |  T  |  N  |  S  | - _ |
+// |SHFT | ' " |  Q  |  J  |  K  |  X  |     |  B  |  M  |  W  |  V  |  Z  |SHFT |
+//                   | ALT | <2> | SPC |     | ENT | <3> | GUI |
+
+// 1 QWERTY
+// |TAB  |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U  |  I  |  O  |  P  |BKSP |
+// |CTRL |  A  |  S  |  D  |  F  |  G  |     |  H  |  J  |  K  |  L  | ; : | ' " |
+// |SHFT |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M  | , < | . > | / ? |SHFT |
+//                   | ALT | <2> | SPC |     | ENT | <3> | GUI |
+
+// 2 LOWER : NUMS + SYMBOLS
+// |GRAVE|  !  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  | "|" |
+// |     |  1  |  2  |  3  |  4  |  5  |     |  -  |  =  |  /  |  [  |  ]  |  \  |
+// |     |  6  |  7  |  8  |  9  |  0  |     |  _  |  +  |  ?  |  {  |  }  |     |
+//                   |     |=====|     |     |     |     |     |
+
+// 3 RAISE : FN + NAV
+// |ESC  | F1  | F2  | F3  | F4  | F5  |     |HOME |PGDN |PGUP |END  |PRNS |DEL  |
+// |CAPS | F6  | F7  | F8  | F9  | F10 |     |LEFT |DOWN | UP  |RIGHT|     |INS  |
+// |     | F11 | F12 |     |     |     |     |     |     |     |     |     |     |
+//                         |     |     |     |     |=====|     |
+
+// 4 ADJUST : BT + MEDIA
+// |EPTOG|     |     |     |     |     |     |MUTE | V-  | V+  |     |     |CALC |
+// |BTCLR|BT1  |BT2  |BT3  |BT4  |BT5  |     |PRV  | PP  |NXT  |     |     |FILES|
+// |     |     |     |     |     |     |     |     |     |     |     |     |     |
+//                         |=====|     |     |     |=====|     |
+
+
