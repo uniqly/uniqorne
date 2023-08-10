@@ -32,37 +32,37 @@
         combo_esc {
             timeout-ms = <COMBO_MS>;
             key-positions = <0 1>;
-            layers = <DVORAK OWERTY>;
+            layers = <0 1>;
             bindings = <&kp ESC>;
         };
         
         combo_del {
             timeout-ms = <COMBO_MS>;
             key-positions = <10 11>;
-            layers = <DVORAK OWERTY>;
+            layers = <0 1>;
             bindings = <&kp DEL>;
         };
         
         qwrt_tog {
             timeout-ms = <COMBO_MS>;
             key-positions = <24 35 39>;
-            layers = <DVORAK>;
-            bindings = <&to QWERTY>;
+            layers = <0>;
+            bindings = <&to 1>;
         };
         
         dvrk_tog {
             timeout-ms = <COMBO_MS>;
             key-positions = <24 35 39>;
-            layers = <QWERTY>;
-            bindings = <&to DVORAK>;
+            layers = <1>;
+            bindings = <&to 0>;
         };
     };
     
     conditional_layers {
         compatible = "zmk,conditional_layers";
         adjust_layer_mo {
-            if-layers = <LOWER RAISE>;
-            then-layer = <ADJUST>;
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
     
