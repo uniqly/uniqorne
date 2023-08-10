@@ -60,7 +60,7 @@
     };
     
     conditional_layers {
-        compatible = "zmk,conditional_layers";
+        compatible = "zmk,conditional-layers";
         adjust_layer_mo {
             if-layers = <2 3>;
             then-layer = <4>;
