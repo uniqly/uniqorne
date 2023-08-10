@@ -122,7 +122,7 @@
             //                                             |     |     |     |     |=====|     |
             label = "NAV";
             bindings = <
-                      &kp ESC  &kp F1   &kp F2   &kp F3  &kp F4   &kp F5     &kp HOME  &kp PG_DN  &kp PU_UP  &kp END    &kp PSCRN  &kp DEL
+                      &kp ESC  &kp F1   &kp F2   &kp F3  &kp F4   &kp F5     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp PSCRN  &kp DEL
                      &kp CAPS  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans     &kp INS
                        &trans  &trans  &kp F11  &kp F12  &trans   &trans     &trans    &trans     &trans     &trans     &trans     &trans
                                                  &trans  &trans   &trans     &trans    &trans     &trans
