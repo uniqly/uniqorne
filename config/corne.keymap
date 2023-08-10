@@ -92,7 +92,6 @@
             //                                       | ALT | <2> | SPC |     | ENT | <3> | GUI |
             label = "QWERTY";
             bindings = <
-            bindings = <
                    &kp TAB  &kp Q  &kp W     &kp E      &kp R      &kp T     &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSPC
                  &kp LCTRL  &kp A  &kp S     &kp D      &kp F      &kp G     &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
                  &kp LSHFT  &kp Z  &kp X     &kp C      &kp V      &kp B     &kp N      &kp M      &kp COMMA  &kp DOT  &kp FLSH  &kp RSHFT
@@ -122,12 +121,11 @@
             //                     |     | F11 | F12 |     |     |     |     |     |     |     |     |     |     |
             //                                             |     |     |     |     |=====|     |
             label = "NAV";
+            bindings = <
                       &kp ESC  &kp F1   &kp F2   &kp F3  &kp F4   &kp F5     &kp HOME  &kp PG_DN  &kp PU_UP  &kp END    &kp PSCRN  &kp DEL
                      &kp CAPS  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans     &kp INS
                        &trans  &trans  &kp F11  &kp F12  &trans   &trans     &trans    &trans     &trans     &trans     &trans     &trans
                                                  &trans  &trans   &trans     &trans    &trans     &trans
-            bindings = <
-            
             >;
         };
         
@@ -138,12 +136,11 @@
             //                     |     |     |     |     |     |     |     |     |     |     |     |     |     |
             //                                       |     |=====|     |     |     |=====|     |
             label = "BT";
-&ext_power EP_TOG        &trans        &trans        &trans        &trans        &trans     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans  &trans  &kp C_AL_CALC
-       &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans  &trans  &kp C_AL_MY_COMPUTER
-           &trans        &trans        &trans        &trans        &trans        &trans     &trans      &trans        &trans        &trans  &trans  &trans
-                                                     &trans        &trans        &trans     &trans      &trans        &trans
             bindings = <
-            
+     &ext_power EP_TOG        &trans        &trans        &trans        &trans        &trans     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans  &trans  &kp C_AL_CALC
+            &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans  &trans  &kp C_AL_MY_COMPUTER
+                &trans        &trans        &trans        &trans        &trans        &trans     &trans      &trans        &trans        &trans  &trans  &trans
+                                                          &trans        &trans        &trans     &trans      &trans        &trans
             >;
         };
     };
