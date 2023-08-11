@@ -24,6 +24,7 @@
         // COMBOS LIST
         // combo_esc (0_1.ESC)<0,1>   : PRESS ESC ON TAB+;/Q
         // combo_del (10_11.DEL)<0,1> : PRESS DEL ON L/P+BKSP
+        // combo_caps (0_35.CAPS)<0,1> : PRESS CAPS ON RSHIFT+TAB
         // qwrt_tog (24_35_39,=>1)<0> : TOGGLES LAYOUT ON LSHFT+RSHFT+ENT
         // dvrk_tog (24_35_39.=>0)<1> : TOGGLES LAYOUT ON LSHFT+RSHFT+ENT
         // |  0  |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  10 |  11 |
@@ -42,6 +43,13 @@
             key-positions = <10 11>;
             layers = <0 1>;
             bindings = <&kp DEL>;
+        };
+        
+        combo_caps {
+            timeout-ms = <COMBO_MS>;
+            key-positions = <0 35>;
+            layers = <0 1>;
+            bindings = <&kp CAPS>;
         };
         
         qwrt_tog {
@@ -72,9 +80,9 @@
         
         dvorak_layer {
             // 0 DVORAK
-            //                     |TAB  | ; : | , < | . > |  P  |  Y  |     |  F  |  G  |  C  |  R  |  L  |BKSP |
+            //                     |TAB  | ' " | , < | . > |  P  |  Y  |     |  F  |  G  |  C  |  R  |  L  |BKSP |
             //                     |CTRL |  A  |  O  |  E  |  U  |  I  |     |  D  |  H  |  T  |  N  |  S  | - _ |
-            //                     |SHFT | ' " |  Q  |  J  |  K  |  X  |     |  B  |  M  |  W  |  V  |  Z  |SHFT |
+            //                     |SHFT | ; : |  Q  |  J  |  K  |  X  |     |  B  |  M  |  W  |  V  |  Z  |SHFT |
             //                                       | ALT | <2> | SPC |     | ENT | <3> | GUI |
             label = "DVORAK";
             bindings = <
@@ -118,13 +126,13 @@
         raise_layer {
             // 3 RAISE : FN + NAV
             //                     |ESC  | F1  | F2  | F3  | F4  | F5  |     |HOME |PGDN |PGUP |END  |PRNS |DEL  |
-            //                     |CAPS | F6  | F7  | F8  | F9  | F10 |     |LEFT |DOWN | UP  |RIGHT|     |INS  |
+            //                     |     | F6  | F7  | F8  | F9  | F10 |     |LEFT |DOWN | UP  |RIGHT|     |INS  |
             //                     |     | F11 | F12 |     |     |     |     |     |     |     |     |     |     |
             //                                             |     |     |     |     |=====|     |
             label = "NAV";
             bindings = <
                       &kp ESC  &kp F1   &kp F2   &kp F3  &kp F4   &kp F5     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp PSCRN  &kp DEL
-                     &kp CAPS  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans     &kp INS
+                       &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans     &kp INS
                        &trans  &trans  &kp F11  &kp F12  &trans   &trans     &trans    &trans     &trans     &trans     &trans     &trans
                                                  &trans  &trans   &trans     &trans    &trans     &trans
             >;

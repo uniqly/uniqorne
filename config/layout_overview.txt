@@ -17,14 +17,15 @@
 // COMBOS LIST
 // combo_esc (0_1.ESC)<0,1>   : PRESS ESC ON TAB+;/Q
 // combo_del (10_11.DEL)<0,1> : PRESS DEL ON L/P+BKSP
+// combo_caps (0_35.CAPS)<0,1> : PRESS CAPS ON RSHIFT+TAB
 // qwrt_tog (24_35_39,=>1)<0> : TOGGLES LAYOUT ON LSHFT+RSHFT+ENT
 // dvrk_tog (24_35_39.=>0)<1> : TOGGLES LAYOUT ON LSHFT+RSHFT+ENT
 // adj_mo (<2>_<3>.<4>)<all> : ENABLE ADJ ON LWR+RSE
 
 // 0 DVORAK
-// |TAB  | ; : | , < | . > |  P  |  Y  |     |  F  |  G  |  C  |  R  |  L  |BKSP |
+// |TAB  | ' " | , < | . > |  P  |  Y  |     |  F  |  G  |  C  |  R  |  L  |BKSP |
 // |CTRL |  A  |  O  |  E  |  U  |  I  |     |  D  |  H  |  T  |  N  |  S  | - _ |
-// |SHFT | ' " |  Q  |  J  |  K  |  X  |     |  B  |  M  |  W  |  V  |  Z  |SHFT |
+// |SHFT | ; : |  Q  |  J  |  K  |  X  |     |  B  |  M  |  W  |  V  |  Z  |SHFT |
 //                   | ALT | <2> | SPC |     | ENT | <3> | GUI |
 
 // 1 QWERTY
@@ -41,12 +42,12 @@
 
 // 3 RAISE : FN + NAV
 // |ESC  | F1  | F2  | F3  | F4  | F5  |     |HOME |PGDN |PGUP |END  |PRNS |DEL  |
-// |CAPS | F6  | F7  | F8  | F9  | F10 |     |LEFT |DOWN | UP  |RIGHT|     |INS  |
+// |     | F6  | F7  | F8  | F9  | F10 |     |LEFT |DOWN | UP  |RIGHT|     |INS  |
 // |     | F11 | F12 |     |     |     |     |     |     |     |     |     |     |
 //                         |     |     |     |     |=====|     |
 
 // 4 ADJUST : BT + MEDIA
-// |EPTOG|     |     |     |     |     |     |MUTE | V-  | V+  |     |     |CALC |
+// |     |     |     |     |     |     |     |MUTE | V-  | V+  |     |     |CALC |
 // |BTCLR|BT1  |BT2  |BT3  |BT4  |BT5  |     |PRV  | PP  |NXT  |     |     |FILES|
 // |     |     |     |     |     |     |     |     |     |     |     |     |     |
 //                         |=====|     |     |     |=====|     |
