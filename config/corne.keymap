@@ -132,16 +132,16 @@
         
         adjust_layer {
             // 4 ADJUST : BT + MEDIA
-            //                     |EPTOG|     |     |     |     |     |     |MUTE | V-  | V+  |     |     |CALC |
+            //                     |     |     |     |     |     |     |     |MUTE | V-  | V+  |     |     |CALC |
             //                     |BTCLR|BT1  |BT2  |BT3  |BT4  |BT5  |     |PRV  | PP  |NXT  |     |     |FILES|
             //                     |     |     |     |     |     |     |     |     |     |     |     |     |     |
             //                                       |     |=====|     |     |     |=====|     |
             label = "BT";
             bindings = <
-     &ext_power EP_TOG        &trans        &trans        &trans        &trans        &trans     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans  &trans  &kp C_AL_CALC
-            &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans  &trans  &kp C_AL_MY_COMPUTER
-                &trans        &trans        &trans        &trans        &trans        &trans     &trans      &trans        &trans        &trans  &trans  &trans
-                                                          &trans        &trans        &trans     &trans      &trans        &trans
+            &trans        &trans        &trans        &trans        &trans        &trans     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans  &trans  &kp C_AL_CALC
+        &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans  &trans  &kp C_AL_MY_COMPUTER
+            &trans        &trans        &trans        &trans        &trans        &trans     &trans      &trans        &trans        &trans  &trans  &trans
+                                                      &trans        &trans        &trans     &trans      &trans        &trans
             >;
         };
     };
