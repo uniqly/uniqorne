@@ -80,7 +80,7 @@
         n9com: nine_comma {
             compatible = "zmk,behavior-mod-morph";
             label = "NINE_COMMA";
-            #binding-cells = <28>;
+            #binding-cells = <0>;
             bindings = <&kp N9>, <&kp COMMA>;
             mods = <(MOD_RSFT)>;
         };
@@ -88,7 +88,7 @@
         n0dot: zero_dot {
             compatible = "zmk,behavior-mod-morph";
             label = "ZERO_DOT";
-            #binding-cells = <29>;
+            #binding-cells = <0>;
             bindings = <&kp N0>, <&kp DOT>;
             mods = <(MOD_RSFT)>;
         };
