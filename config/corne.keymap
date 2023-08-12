@@ -16,6 +16,7 @@
 #define ADJUST 4
 
 #define COMBO_MS 50
+#define COMBO_LONG 200
 
 / {
     combos {
@@ -46,21 +47,21 @@
         };
         
         combo_caps {
-            timeout-ms = <COMBO_MS>;
+            timeout-ms = <COMBO_LONG>;
             key-positions = <0 35>;
             layers = <0 1>;
             bindings = <&kp CAPS>;
         };
         
         qwrt_tog {
-            timeout-ms = <COMBO_MS>;
+            timeout-ms = <COMBO_LONG>;
             key-positions = <24 35 39>;
             layers = <0>;
             bindings = <&to 1>;
         };
         
         dvrk_tog {
-            timeout-ms = <COMBO_MS>;
+            timeout-ms = <COMBO_LONG>;
             key-positions = <24 35 39>;
             layers = <1>;
             bindings = <&to 0>;
@@ -72,6 +73,24 @@
         adjust_layer_mo {
             if-layers = <2 3>;
             then-layer = <4>;
+        };
+    };
+    
+    behaviors {
+        n9com: nine_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NINE_COMMA";
+            #binding-cells = <28>;
+            bindings = <&kp N9>, <&kp COMMA>;
+            mods = <(MOD_RSFT)>;
+        };
+        
+        n0dot: zero_dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ZERO_DOT";
+            #binding-cells = <29>;
+            bindings = <&kp N0>, <&kp DOT>;
+            mods = <(MOD_RSFT)>;
         };
     };
     
@@ -110,15 +129,15 @@
         
         lower_layer {
             // 2 LOWER : NUMS + SYMBOLS
-            //                     |GRAVE|  !  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  | "|" |
-            //                     |     |  1  |  2  |  3  |  4  |  5  |     |  -  |  =  |  /  |  [  |  ]  |  \  |
-            //                     |     |  6  |  7  |  8  |  9  |  0  |     |  _  |  +  |  ?  |  {  |  }  |     |
-            //                                       |     |=====|     |     |     |     |     |
+            //               |GRAVE|  !  |  @  |  #  |   $    |   %    |     |  ^  |  &  |  *  |  (  |  )  | "|" |
+            //               |     |  1  |  2  |  3  |   4    |   5    |     |  -  |  =  |  /  |  [  |  ]  |  \  |
+            //               |     |  6  |  7  |  8  |9:RSFT>,|0:RSFT>.|     |  _  |  +  |  ?  |  {  |  }  |     |
+            //                                 |     |========|        |     |     |     |     |
             label = "NUM";
             bindings = <
               &kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp PIPE
                  &trans    &kp N1  &kp N2    &kp N3    &kp N4     &kp N5     &kp MINUS  &kp EQUAL  &kp FSLH   &kp LBKT  &kp RBKT  &kp BSLH
-                 &trans    &kp N6  &kp N7    &kp N8    &kp N9     &kp N0     &kp UNDER  &kp PLUS   &kp QMARK  &kp LBRC  &kp RBRC  &trans
+                 &trans    &kp N6  &kp N7    &kp N8    &n9com     &n0dot     &kp UNDER  &kp PLUS   &kp QMARK  &kp LBRC  &kp RBRC  &trans
                                              &trans    &trans     &trans     &trans     &trans     &trans
             >;
         };
