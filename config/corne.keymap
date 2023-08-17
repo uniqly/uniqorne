@@ -25,7 +25,6 @@
         // COMBOS LIST
         // combo_esc (0_1.ESC)<0,1>   : PRESS ESC ON TAB+;/Q
         // combo_del (10_11.DEL)<0,1> : PRESS DEL ON L/P+BKSP
-        // combo_caps (0_35.CAPS)<0,1> : PRESS CAPS ON RSHIFT+TAB
         // qwrt_tog (24_35_39,=>1)<0> : TOGGLES LAYOUT ON LSHFT+RSHFT+ENT
         // dvrk_tog (24_35_39.=>0)<1> : TOGGLES LAYOUT ON LSHFT+RSHFT+ENT
         // |  0  |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  10 |  11 |
@@ -37,13 +36,6 @@
             key-positions = <0 1>;
             layers = <0 1>;
             bindings = <&kp ESC>;
-        };
-        
-        combo_del {
-            timeout-ms = <COMBO_MS>;
-            key-positions = <10 11>;
-            layers = <0 1>;
-            bindings = <&kp DEL>;
         };
         
         combo_caps {
@@ -92,6 +84,22 @@
             bindings = <&kp N0>, <&kp DOT>;
             mods = <(MOD_RSFT)>;
         };
+        
+        tabcap: tab_caps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TAB_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp CAPS>;
+            mods = <(MOD_RSFT)>;
+        };
+        
+        tdnum: tap_num {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_NUM";
+            #binding-cells = <0>;
+            tapping-term-ms = <COMBO_MS>;
+            bindings = <&mo 2>, <&tog 2>;
+        };
     };
     
     keymap {
@@ -99,31 +107,31 @@
         
         dvorak_layer {
             // 0 DVORAK
-            //                     |TAB  | ' " | , < | . > |  P  |  Y  |     |  F  |  G  |  C  |  R  |  L  |BKSP |
-            //                     |CTRL |  A  |  O  |  E  |  U  |  I  |     |  D  |  H  |  T  |  N  |  S  | - _ |
-            //                     |SHFT | ; : |  Q  |  J  |  K  |  X  |     |  B  |  M  |  W  |  V  |  Z  |SHFT |
-            //                                       | ALT | <2> | SPC |     | ENT | <3> | GUI |
+            //        |TABS:RSHFT>CAPS| ' " | , < | . > |   P    |  Y  |     |  F  |  G  |  C  |  R  |  L  |BKSP |
+            //        |CTRL           |  A  |  O  |  E  |   U    |  I  |     |  D  |  H  |  T  |  N  |  S  | - _ |
+            //        |SHFT           | ; : |  Q  |  J  |   K    |  X  |     |  B  |  M  |  W  |  V  |  Z  |SHFT |
+            //                                    | ALT |<2>..=>2| SPC |     | ENT | <3> | GUI |
             label = "DVORAK";
             bindings = <
-           &kp TAB    &kp SQT  &kp COMMA   &kp DOT      &kp P      &kp Y     &kp F      &kp G      &kp C     &kp R  &kp L  &kp BSPC
+           &tabcap    &kp SQT  &kp COMMA   &kp DOT      &kp P      &kp Y     &kp F      &kp G      &kp C     &kp R  &kp L  &kp BSPC
          &kp LCTRL      &kp A      &kp O     &kp E      &kp U      &kp I     &kp D      &kp H      &kp T     &kp N  &kp S  &kp MINUS
          &kp LSHFT   &kp SEMI      &kp Q     &kp J      &kp K      &kp X     &kp B      &kp M      &kp W     &kp V  &kp Z  &kp RSHFT
-                                          &kp LALT  &mo LOWER  &kp SPACE     &kp ENTER  &mo RAISE  &kp RGUI
+                                          &kp LALT     &tdnum  &kp SPACE     &kp ENTER  &mo RAISE  &kp RGUI
             >;
         };
         
         qwerty_layer {
             // 1 QWERTY
-            //                     |TAB  |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U  |  I  |  O  |  P  |BKSP |
-            //                     |CTRL |  A  |  S  |  D  |  F  |  G  |     |  H  |  J  |  K  |  L  | ; : | ' " |
-            //                     |SHFT |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M  | , < | . > | / ? |SHFT |
-            //                                       | ALT | <2> | SPC |     | ENT | <3> | GUI |
+            //        |TABS:RSHFT>CAPS|  Q  |  W  |  E  |   R    |  T  |     |  Y  |  U  |  I  |  O  |  P  |BKSP |
+            //        |CTRL           |  A  |  S  |  D  |   F    |  G  |     |  H  |  J  |  K  |  L  | ; : | ' " |
+            //        |SHFT           |  Z  |  X  |  C  |   V    |  B  |     |  N  |  M  | , < | . > | / ? |SHFT |
+            //                                    | ALT |<2>..=>2| SPC |     | ENT | <3> | GUI |
             label = "QWERTY";
             bindings = <
-                   &kp TAB  &kp Q  &kp W     &kp E      &kp R      &kp T     &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSPC
+                   &tabcap  &kp Q  &kp W     &kp E      &kp R      &kp T     &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSPC
                  &kp LCTRL  &kp A  &kp S     &kp D      &kp F      &kp G     &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
                  &kp LSHFT  &kp Z  &kp X     &kp C      &kp V      &kp B     &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                          &kp LALT  &mo LOWER  &kp SPACE     &kp ENTER  &mo RAISE  &kp RGUI
+                                          &kp LALT     &tdnum  &kp SPACE     &kp ENTER  &mo RAISE  &kp RGUI
             >;
         };
         
