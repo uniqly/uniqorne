@@ -97,7 +97,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_NUM";
             #binding-cells = <0>;
-            tapping-term-ms = <COMBO_MS>;
+            tapping-term-ms = <COMBO_LONG>;
             bindings = <&mo 2>, <&tog 2>;
         };
     };
