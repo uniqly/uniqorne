@@ -89,7 +89,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "TAB_CAPS";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp CAPS>;
+            bindings = <&kp TAB>, <&kp CAPS>;
             mods = <(MOD_RSFT)>;
         };
         
