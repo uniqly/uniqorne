@@ -38,11 +38,11 @@
             bindings = <&kp ESC>;
         };
         
-        combo_caps {
-            timeout-ms = <COMBO_LONG>;
-            key-positions = <0 35>;
+        combo_del {
+            timeout-ms = <COMBO_MS>;
+            key-positions = <10 11>;
             layers = <0 1>;
-            bindings = <&kp CAPS>;
+            bindings = <&kp DEL>;
         };
         
         qwrt_tog {
