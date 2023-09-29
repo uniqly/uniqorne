@@ -1,14 +1,10 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
+    - name: PraeceptorXS
+      url-base: https://github.com/PraeceptorXS
   projects:
     - name: zmk
-      remote: mctechnology17
+      remote: PraeceptorXS
       revision: main
       import: app/west.yml
   self:
