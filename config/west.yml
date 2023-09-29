@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: PraeceptorXS
-      url-base: https://github.com/PraeceptorXS
+    - name: uniqly
+      url-base: https://github.com/uniqly
   projects:
     - name: zmk
-      remote: PraeceptorXS
+      remote: uniqly
       revision: main
       import: app/west.yml
   self:
